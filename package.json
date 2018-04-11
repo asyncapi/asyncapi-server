@@ -1,0 +1,31 @@
+{
+  "name": "asyncapi-server",
+  "version": "0.1.0",
+  "description": "Documentation-driven AsyncAPI server",
+  "main": "index.js",
+  "scripts": {
+    "example": "node example/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "asyncapi",
+    "documentation",
+    "server"
+  ],
+  "author": "Fran Mendez <fmvilas@gmail.com> (fmvilas.com)",
+  "license": "MIT",
+  "dependencies": {
+    "asyncapi": "^2.0.2",
+    "hermesjs": "^1.4.1",
+    "hermesjs-amqp": "^0.5.0",
+    "hermesjs-mqtt": "^1.1.1",
+    "js-yaml": "^3.11.0",
+    "json-schema-ref-parser": "^5.0.3",
+    "z-schema": "^3.19.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0"
+  }
+}
