@@ -92,6 +92,9 @@ components:
   schemas:
     lightMeasuredPayload:
       type: object
+      required:
+        - lumens
+        - sentAt
       properties:
         lumens:
           type: integer

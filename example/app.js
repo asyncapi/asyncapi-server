@@ -9,23 +9,22 @@ AsyncApiServer.start({
   schemes: {
     mqtt: {
       url: 'mqtt://test.mosquitto.org',
+      topics: 'smartylighting/streetlights/1/0/#',
     },
   },
   middlewares: {
-    incoming: [
+    inbound: [
       'default',
     ],
-    outgoing: [
+    outbound: [
       'default',
     ],
   },
 }).then((hermes) => {
   console.log('Server listening...');
-  hermes.from.client.send({
-    topic: 'smartylighting/streetlights/1/0/action/123/turn/on',
-    payload: {
-      command: 'on',
-      sentAt: '1985-04-12T23:20:50.52Z',
-    },
-  });
+  console.log('Sending a message to the broker...');
+  hermes.send({
+    command: 'on',
+    sentAt: '1985-04-12T23:20:50.52Z',
+  }, {}, 'smartylighting/streetlights/1/0/action/123/turn/on');
 }).catch(console.error);

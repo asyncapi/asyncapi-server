@@ -16,9 +16,10 @@
   "license": "MIT",
   "dependencies": {
     "asyncapi": "^2.0.2",
-    "hermesjs": "^1.4.1",
+    "debug": "^3.1.0",
+    "hermesjs": "^2.2.1",
     "hermesjs-amqp": "^0.5.0",
-    "hermesjs-mqtt": "^1.1.1",
+    "hermesjs-mqtt": "^2.0.1",
     "js-yaml": "^3.11.0",
     "json-schema-ref-parser": "^5.0.3",
     "z-schema": "^3.19.1"
